@@ -1,0 +1,83 @@
+// Copyright 2014 Vinay Jain, India
+// 
+// Licensed under the Apache License, Version 2.0 (the "License");
+// you may not use this file except in compliance with the License.
+// You may obtain a copy of the License at
+//
+//    http://www.apache.org/licenses/LICENSE-2.0
+//
+// Unless required by applicable law or agreed to in writing, software
+// distributed under the License is distributed on an "AS IS" BASIS,
+// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+// See the License for the specific language governing permissions and
+// limitations under the License.
+//-----------------------------------------------------------------
+// Author : Vinay Jain
+// Last Modification : 
+// Email ID :  vinay.jain5@wipro.com
+//
+// Please report the bug with the subject line "Logger : Report Bug"
+//----------------------------------------------------------------
+
+
+=========================================================
+Directory Structure :
+Logger/
+|-- example
+|   |-- Makefile
+|   |-- README
+|   |-- dut
+|   |   |-- sram.v
+|   |   `-- top_dut.v
+|   |-- env
+|   |   |-- base_test.sv
+|   |   |-- common_define.svh
+|   |   `-- top_package.sv
+|   |-- file.list
+|   |-- logs
+|   |-- sourceme.cshrc
+|   `-- top_tb.sv
+|-- inc
+|   |-- bd_mem_derived.svh
+|   |-- logger_define.svh
+|   |-- logger_macro.h
+|   `-- logger_top_package.sv
+|-- run.f
+`-- src
+    |-- logger.c ---------------------->  C Function. Copy into C base source code lib
+    |-- logger.h ---------------------->  C base Macro. Copy into C base include dir.
+    |-- logger_base.sv
+    |-- logger_bd_access_pkg.sv
+    `-- logger_if.sv
+=========================================================
+
+
+=========================================================
+Installation Guidelines
+- Copy Logger Directory into your workspace and thats it Logger Block is installed. :)
+
+Note : Just make sure you edit your Makefile to add installed dir path in
+       +incdir+<> .
+       Ref. example's makefile for more details.
+=========================================================
+
+=========================================================
+To Run Basic example to understand functinality of Logger
+Follow below steps :
+1. Go to Logger/example 
+2. source sourceme.cshrc
+3. run the base_test 
+   make run TEST=base_test
+
+vcdplus.vpd --> Wavefrom dump
+=========================================================
+
+=========================================================
+Note : There is real-time sample example form one of our 
+       Past project.There is no arrangement done in example 
+       to to run this testcase as it need a complete
+       Setup.
+
+example/sample_code/
+|-- logger_testing.sv  --> SV testcase corresponding to C testcase
+`-- sram_rdwr_test.c   --> Actual C testcase.
