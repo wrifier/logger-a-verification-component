@@ -1,0 +1,5 @@
+dut/sram.v
+dut/top_dut.v
+$UVM_HOME/src/uvm_pkg.sv
+env/top_package.sv
+top_tb.sv
