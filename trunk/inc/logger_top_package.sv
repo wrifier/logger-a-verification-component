@@ -25,6 +25,7 @@ package logger_top_package;
 
   import uvm_pkg::*;
   `include "uvm_macros.svh"
+  `include "sv_macros.sv"
  
   `include "logger_base.sv"
 endpackage 
